@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Games.TrainGame
+namespace Games.FireFighterGame
 {
     public class Plug : MonoBehaviour
     {
