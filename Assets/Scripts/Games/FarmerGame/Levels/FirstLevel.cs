@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Games.FarmerGame.Levels
@@ -29,6 +30,7 @@ namespace Games.FarmerGame.Levels
             foreach (var tractor in _tractorCntrls)
             {
                 tractor.gameObject.SetActive(false);
+                tractor.FillProgressBar();
             }
         }
     }

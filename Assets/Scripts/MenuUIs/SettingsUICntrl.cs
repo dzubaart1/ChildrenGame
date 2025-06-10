@@ -1,16 +1,20 @@
-﻿using System;
+﻿using DefaultNamespace;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace MenuUIs
 {
-    public class SettingsUICntrl : MenuUIBase
+    public class SettingsUICntrl : MonoBehaviour
     {
+        [Header("Refs")]
+        [SerializeField] private MenuCntrl _menuCntrl;
+        
+        [Space]
+        [Header("UIs")]
         [SerializeField] private Button _muteBtn;
         [SerializeField] private Button _chooseGameBtn;
 
-        private void Awake()
+        private void OnEnable()
         {
             _muteBtn.onClick.AddListener(OnClickMuteBtn);
             _chooseGameBtn.onClick.AddListener(OnClickChooseGameBtn);
@@ -24,17 +28,18 @@ namespace MenuUIs
 
         private void OnClickMuteBtn()
         {
-            
-        }
-
-        private void OnClickChooseGameBtn()
-        {
-            if (MenuCntrl == null)
+            SoundManager soundManager = SoundManager.Instance;
+            if (soundManager == null)
             {
                 return;
             }
             
-            MenuCntrl.SwitchToChooseGameUI();
+            soundManager.ToggleMute();
+        }
+
+        private void OnClickChooseGameBtn()
+        {
+            _menuCntrl.SwitchToChooseGameUI();
         }
     }
 }

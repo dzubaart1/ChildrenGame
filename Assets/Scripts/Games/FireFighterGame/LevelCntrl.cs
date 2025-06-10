@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using DefaultNamespace;
+using UnityEngine;
 
 namespace Games.FireFighterGame
 {
@@ -7,19 +9,45 @@ namespace Games.FireFighterGame
         [Header("Refs")]
         [SerializeField] private FireFighterGameUICntrl _fireFighterGameUICntrl;
         [SerializeField] private PlaceHolder _placeHolder;
-        
-        private bool _isGameFinished = false;
-        
+
+        public bool IsLevelCompleted { get; private set; }
+
         private void Update()
         {
-            if (!_isGameFinished)
+            if (!IsLevelCompleted)
             {
                 if (_placeHolder.IsActivated)
                 {
-                    _isGameFinished = true;
-                    _fireFighterGameUICntrl.SwitchToNextLevelUI();
+                    IsLevelCompleted = true;
+                    StartCoroutine(OnLevelFinished());
                 }
             }
+        }
+        
+        private IEnumerator OnLevelFinished()
+        {
+            GameManager gameManager = GameManager.Instance;
+            if (gameManager == null)
+            {
+                yield break;
+            }
+            
+            EffectsManager effectsManager = EffectsManager.Instance;
+            if (effectsManager == null)
+            {
+                yield break;
+            }
+            
+            SoundManager soundManager = SoundManager.Instance;
+            if (soundManager == null)
+            {
+                yield break;
+            }
+            
+            effectsManager.StartCongratulations();
+            soundManager.PlayAdditionalSound(ESound.Success);
+            yield return new WaitForSeconds(2f);
+            _fireFighterGameUICntrl.SwitchToNextLevelUI();
         }
     }
 }

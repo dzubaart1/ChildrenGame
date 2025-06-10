@@ -12,6 +12,7 @@
         Sausage = 0,
         Fork = 1,
         Fish = 2,
-        Meat = 3
+        Meat = 3,
+        Chicken = 4
     }
 }

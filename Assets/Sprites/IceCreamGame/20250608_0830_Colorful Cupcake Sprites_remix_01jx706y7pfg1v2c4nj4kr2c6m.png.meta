@@ -1,0 +1,549 @@
+fileFormatVersion: 2
+guid: 8fa22d19caba93545a1b47923af9736b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pancake_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 393
+        width: 250
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7eced8bb55834419cdcee045ed194a
+      internalID: 750391539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pancake_4
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 394
+        width: 250
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d2e936062651747b7632f0d5cd9f02
+      internalID: 1516215154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pancake_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 393
+        width: 250
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc97b211968fec41912b1d74ccc31f2
+      internalID: -1488572584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_29
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 740
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b1ef4f798d5d240be6800b7a5c1824
+      internalID: -1795506141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pancake_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 250
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22ce4f7f46fdff469e0d1d0f60e7af0
+      internalID: 1821045720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_31
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 550
+        width: 4
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190599b1d25705845968f37f047ef240
+      internalID: -630656607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_32
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 444
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea2106a4029cfb45960ba4fdc136955
+      internalID: -2081062643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_33
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 393
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62bc2d8c89fdf0499321f1568765701
+      internalID: -376531712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6d90043eeaa334c88e5cd1c8b5860f
+      internalID: -240222315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_35
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 344
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c156b66c638b934e8bdd3a50113a825
+      internalID: -488706918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 334
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13a90bf8a4ab834fb9c2be947fd21dc
+      internalID: 2069032225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_37
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 108
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe5bc4e66cc0fa4b8eb719b390f44ad
+      internalID: -655323241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_38
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 108
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e61161f176ebc4c954455139249e39
+      internalID: -1711082262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_39
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 83
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ffaf8b76871a44dbcf805b8000c2d5
+      internalID: 1785757175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_40
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 83
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf989fe5fe3fcbc4fbab1962ca54e1e5
+      internalID: -1083657137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_41
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 83
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4aecf3b50f5cf4b88d52b12b0724b8
+      internalID: 1933509520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_42
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 83
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6320934f596244db8a33498d594450
+      internalID: 2084181046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_43
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 83
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41fc83fae491e747a604571739a6e22
+      internalID: 590768370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_0: 1107396904
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_1: -597827174
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_10: 265467671
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_11: 1732953675
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_12: -2084300962
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_13: -338087816
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_14: 1492872576
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_15: 2097267068
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_16: -1525883116
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_17: 819926200
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_18: 1697042420
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_19: 207741
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_2: -1938772119
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_20: 1852850363
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_21: -1994181920
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_22: 1175689410
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_23: -1628500766
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_24: -134110051
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_26: -822496304
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_29: -1795506141
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_3: 1811196024
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_31: -630656607
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_32: -2081062643
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_33: -376531712
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_34: -240222315
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_35: -488706918
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_36: 2069032225
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_37: -655323241
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_38: -1711082262
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_39: 1785757175
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_4: -681212553
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_40: -1083657137
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_41: 1933509520
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_42: 2084181046
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_43: 590768370
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_5: 1278077486
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_6: 1379360144
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_7: -152342287
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_8: -1812589074
+      20250608_0830_Colorful Cupcake Sprites_remix_01jx706y7pfg1v2c4nj4kr2c6m_9: 477632667
+      Pancake_1: 1821045720
+      Pancake_2: -1488572584
+      Pancake_3: 750391539
+      Pancake_4: 1516215154
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

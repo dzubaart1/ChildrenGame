@@ -11,16 +11,23 @@ namespace Games.FarmerGame
         [SerializeField] private RectTransform _rectTransform;
         [SerializeField] private Canvas _parentCanvas;
 
+        [SerializeField] private float _offset;
+
         public bool IsCompleted { get; private set; } = false;
 
         public void Update()
         {
-            _progressBar.fillAmount = _rectTransform.anchoredPosition.x / ((RectTransform)_parentCanvas.transform).rect.width;
+            _progressBar.fillAmount = (_rectTransform.anchoredPosition.x + _offset) / ((RectTransform)_parentCanvas.transform).rect.width;
 
             if (_progressBar.fillAmount > 0.8f)
             {
                 IsCompleted = true;
             }
+        }
+
+        public void FillProgressBar()
+        {
+            _progressBar.fillAmount = 1;
         }
     }
 }

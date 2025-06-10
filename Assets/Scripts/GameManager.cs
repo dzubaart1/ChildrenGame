@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string _trainGameSceneName;
     [SerializeField] private string _fireFighterGameSceneName;
     [SerializeField] private string _backingGameSceneName;
-    [SerializeField] private string _fishingGameSceneName;
     [SerializeField] private string _iceCreamGameSceneName;
     [SerializeField] private string _farmerGameSceneName;
+    [SerializeField] private string _menuSceneName;
     
     [CanBeNull] public static GameManager Instance { get; private set; }
     
@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
         }
         
         DontDestroyOnLoad(gameObject);    
+    }
+
+    public void StartMenuScene()
+    {
+        SceneManager.LoadScene(_menuSceneName);
     }
 
     public void StartTrainGameScene()
@@ -36,11 +41,6 @@ public class GameManager : MonoBehaviour
     public void StartBackingGameScene()
     {
         SceneManager.LoadScene(_backingGameSceneName);
-    }
-
-    public void StartFishingGameScene()
-    {
-        SceneManager.LoadScene(_fishingGameSceneName);
     }
 
     public void StartIceCreamGameScene()

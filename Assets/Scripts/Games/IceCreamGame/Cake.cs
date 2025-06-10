@@ -5,12 +5,12 @@ namespace Games.IceCreamGame
 {
     public class Cake : MonoBehaviour, IPointerDownHandler
     {
-        [SerializeField] private LevelCntrl _levelCntrl;
+        [SerializeField] private IceCreamGameUICntrl _iceCreamGameUICntrl;
         [SerializeField] private ECake _cakeType;
         
         public void OnPointerDown(PointerEventData eventData)
         {
-            _levelCntrl.TryComplete(ECream.No, ECup.No, _cakeType, EFruite.No);
+            _iceCreamGameUICntrl.CurrentLevel.TryComplete(ECream.No, ECup.No, _cakeType, EFruite.No);
         }
     }
 }

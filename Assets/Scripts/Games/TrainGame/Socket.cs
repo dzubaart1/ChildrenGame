@@ -32,7 +32,7 @@ namespace Games.TrainGame
         private void OnPlugEntered(Transform plug)
         {
             IsActivated = true;
-            _image.color = Color.magenta;
+            _image.color = Color.white;
             plug.gameObject.SetActive(false);
         }
     }

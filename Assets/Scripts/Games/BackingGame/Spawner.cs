@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using DefaultNamespace;
 using JetBrains.Annotations;
 using Tools;
 using UnityEngine;
@@ -28,6 +29,12 @@ namespace Games.BackingGame
                 return;
             }
             
+            SoundManager soundManager = SoundManager.Instance;
+            if (soundManager == null)
+            {
+                return;
+            }
+            
             Meal meal = Instantiate(_mealPrefab, _spawnersHolder);
             meal.Init(_mealConfig);
 
@@ -51,6 +58,7 @@ namespace Games.BackingGame
             rectTransform.anchoredPosition = pos;
             
             draggableUI.ForceSetDragStatus(EDragStatus.Drag);
+            soundManager.PlayAdditionalSound(ESound.BeginDrag);
             
             _startPos = pos;
             _currentMeal = meal;

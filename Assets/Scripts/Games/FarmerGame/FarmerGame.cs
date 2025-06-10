@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
+using DefaultNamespace;
 using Games.FarmerGame.Levels;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
@@ -33,8 +35,16 @@ namespace Games.FarmerGame
 
         public void SwitchToNextLevel()
         {
+            GameManager gameManager = GameManager.Instance;
+            if (gameManager == null)
+            {
+                return;
+            }
+            
             if (_currentLevelID + 1 == _levels.Length)
             {
+                StartCoroutine(OnFinishGame());
+                gameManager.StartMenuScene();
                 return;
             }
 
@@ -45,6 +55,33 @@ namespace Games.FarmerGame
             
             CurrentLevel = _levels[++_currentLevelID];
             CurrentLevel.OnStartLevel();
+        }
+
+        private IEnumerator OnFinishGame()
+        {
+            EffectsManager effectsManager = EffectsManager.Instance;
+            if (effectsManager == null)
+            {
+                yield break;
+            }
+        
+            GameManager gameManager = GameManager.Instance;
+            if (gameManager == null)
+            {
+                yield break;
+            }
+            
+            SoundManager soundManager = SoundManager.Instance;
+            if (soundManager == null)
+            {
+                yield break;
+            }
+        
+            effectsManager.StartCongratulations();
+            soundManager.PlayAdditionalSound(ESound.Success);
+            yield return new WaitForSeconds(2f);
+        
+            gameManager.StartMenuScene();
         }
     }
 }

@@ -35,6 +35,8 @@
         Second = 1,
         Third = 2,
         Fourth = 3,
-        No = 6
+        No = 6,
+        Six = 7,
+        Five = 4,
     }
 }

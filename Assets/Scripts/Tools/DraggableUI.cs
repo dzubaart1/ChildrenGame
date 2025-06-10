@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DefaultNamespace;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 
 namespace Tools
 {
+    [RequireComponent(typeof(RectTransform))]
     public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        [Header("UIs")]
-        [FormerlySerializedAs("rectTransform")] [SerializeField] private RectTransform _rectTransform;
-        
         [Space]
         [Header("Configs")]
         [SerializeField] private bool _isComeBackToStartPos = false;
@@ -19,8 +16,9 @@ namespace Tools
         [SerializeField] private bool _constaintsY = false;
 
         [CanBeNull] private Canvas _parentCanvas;
+        [CanBeNull] private RectTransform _rectTransform;
 
-        public EDragStatus DragStatus = EDragStatus.EndDrag;
+        public EDragStatus DragStatus { get; private set; }
         public IReadOnlyList<Collider2D> CollideWith => _collideWith;
         private List<Collider2D> _collideWith = new List<Collider2D>();
         
@@ -29,6 +27,7 @@ namespace Tools
         private void Awake()
         {
             _parentCanvas = transform.GetComponentInParent<Canvas>();
+            _rectTransform = transform.GetComponent<RectTransform>();
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -50,6 +49,11 @@ namespace Tools
             {
                 return;
             }
+
+            if (_rectTransform == null)
+            {
+                return;
+            }
             
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 _parentCanvas.transform as RectTransform, 
@@ -68,10 +72,18 @@ namespace Tools
         
         public void OnBeginDrag(PointerEventData eventData)
         {
+            SoundManager soundManager = SoundManager.Instance;
+            if (soundManager == null)
+            {
+                return;
+            }
+            
             if (_isComeBackToStartPos)
             {
                 _startPos = _rectTransform.anchoredPosition;
             }
+            
+            soundManager.PlayAdditionalSound(ESound.BeginDrag);
         }
         
         public void OnEndDrag(PointerEventData eventData)

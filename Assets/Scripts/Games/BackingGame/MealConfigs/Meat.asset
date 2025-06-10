@@ -15,9 +15,9 @@ MonoBehaviour:
   NextDonensSeconds: 3
   MealType: 3
   Doneness:
-  - Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - Sprite: {fileID: 21300000, guid: b912105384c092d4bbe8277f0e3b8ae4, type: 3}
     Tint: {r: 0.8117647, g: 0.7438732, b: 0.63529414, a: 1}
-  - Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - Sprite: {fileID: 21300000, guid: b912105384c092d4bbe8277f0e3b8ae4, type: 3}
     Tint: {r: 0.8792453, g: 0.5602157, b: 0.25713766, a: 1}
-  - Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - Sprite: {fileID: 21300000, guid: b912105384c092d4bbe8277f0e3b8ae4, type: 3}
     Tint: {r: 0.23773581, g: 0.18433908, b: 0.100028455, a: 1}

@@ -1,4 +1,6 @@
-using System;
+using System.Collections;
+using System.Linq;
+using DefaultNamespace;
 using Games.BackingGame;
 using UnityEngine;
 
@@ -8,6 +10,7 @@ public class BackingGameUICntrl : MonoBehaviour
     [SerializeField] private LevelCntrl[] _levelCntrls;
         
     private int _currentUIID = 0;
+    private bool _isGameFinished = false;
     
     private void Start()
     {
@@ -21,7 +24,19 @@ public class BackingGameUICntrl : MonoBehaviour
         
         _levelCntrls[_currentUIID].gameObject.SetActive(true);
     }
-        
+
+    private void Update()
+    {
+        if (!_isGameFinished)
+        {
+            if (_levelCntrls.All(level => level.IsLevelCompleted))
+            {
+                _isGameFinished = true;
+                StartCoroutine(OnGameFinished());
+            }
+        }
+    }
+
     public void SwitchToNextLevelUI()
     {
         _levelCntrls[_currentUIID].gameObject.SetActive(false);
@@ -30,5 +45,32 @@ public class BackingGameUICntrl : MonoBehaviour
         {
             _levelCntrls[++_currentUIID].gameObject.SetActive(true);    
         }
+    }
+
+    private IEnumerator OnGameFinished()
+    {
+        EffectsManager effectsManager = EffectsManager.Instance;
+        if (effectsManager == null)
+        {
+            yield break;
+        }
+        
+        GameManager gameManager = GameManager.Instance;
+        if (gameManager == null)
+        {
+            yield break;
+        }
+        
+        SoundManager soundManager = SoundManager.Instance;
+        if (soundManager == null)
+        {
+            yield break;
+        }
+        
+        effectsManager.StartCongratulations();
+        soundManager.PlayAdditionalSound(ESound.Success);
+        yield return new WaitForSeconds(1f);
+        
+        gameManager.StartMenuScene();
     }
 }

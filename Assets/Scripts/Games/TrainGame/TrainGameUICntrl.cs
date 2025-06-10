@@ -1,4 +1,8 @@
-﻿using JetBrains.Annotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using DefaultNamespace;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Games.TrainGame
@@ -6,83 +10,90 @@ namespace Games.TrainGame
     public class TrainGameUICntrl : MonoBehaviour
     {
         [Header("Levels")]
-        [SerializeField] private RectTransform _firstLevelUI;
-        [SerializeField] private RectTransform _secondLevelUI;
-        [SerializeField] private RectTransform _thirdLevelUI;
-        [SerializeField] private RectTransform _fourthLevelUI;
-
-        [Space]
-        [Header("Others")]
-        [SerializeField] private RectTransform _chooseLevelUI;
-        [SerializeField] private RectTransform _defaultUI;
+        [SerializeField] private List<LevelCntrl> _levelCntrls;
         
-        [CanBeNull] private RectTransform _currentUI;
+        [CanBeNull] private LevelCntrl _currentLevel;
 
+        private int _currentLevelID = 0;
+        private bool _isGameFinished = false;
+        
         private void Start()
         {
-            _firstLevelUI.gameObject.SetActive(false);
-            _secondLevelUI.gameObject.SetActive(false);
-            _thirdLevelUI.gameObject.SetActive(false);
-            _fourthLevelUI.gameObject.SetActive(false);
-            _chooseLevelUI.gameObject.SetActive(false);
+            foreach (var level in _levelCntrls)
+            {
+                level.gameObject.SetActive(false);
+            }
             
-            _defaultUI.gameObject.SetActive(true);
-            _currentUI = _defaultUI;
-        }
-
-        public void SwitchToChooseLevelUI()
-        {
-            if (_currentUI != null)
-            {
-                _currentUI.gameObject.SetActive(false);
-            }
-
-            _chooseLevelUI.gameObject.SetActive(true);
-            _currentUI = _chooseLevelUI;
+            _currentLevelID = 0;
+            
+            LevelCntrl levelCntrl = _levelCntrls[_currentLevelID];
+            levelCntrl.gameObject.SetActive(true);
+            
+            _currentLevel = levelCntrl;
         }
         
-        public void SwitchToFirstLevelUI()
+        private void Update()
         {
-            if (_currentUI != null)
+            if (!_isGameFinished)
             {
-                _currentUI.gameObject.SetActive(false);
+                if (_levelCntrls.All(level => level.IsLevelCompleted))
+                {
+                    _isGameFinished = true;
+                    StartCoroutine(OnGameFinished());
+                }
+            }
+        }
+
+        public void SwitchToNextLevel()
+        {
+            GameManager gameManager = GameManager.Instance;
+            if (gameManager == null)
+            {
+                return;
+            }
+            
+            if (_currentLevel != null)
+            {
+                _currentLevel.gameObject.SetActive(false);
             }
 
-            _firstLevelUI.gameObject.SetActive(true);
-            _currentUI = _firstLevelUI;
+            if (_currentLevelID + 1 == _levelCntrls.Count)
+            {
+                gameManager.StartMenuScene();
+                return;
+            }
+
+            LevelCntrl levelCntrl = _levelCntrls[++_currentLevelID];
+            levelCntrl.gameObject.SetActive(true);
+            
+            _currentLevel = levelCntrl;
         }
         
-        public void SwitchToSecondLevelUI()
+        private IEnumerator OnGameFinished()
         {
-            if (_currentUI != null)
+            EffectsManager effectsManager = EffectsManager.Instance;
+            if (effectsManager == null)
             {
-                _currentUI.gameObject.SetActive(false);
+                yield break;
             }
-
-            _secondLevelUI.gameObject.SetActive(true);
-            _currentUI = _secondLevelUI;
-        }
         
-        public void SwitchToThirdLevelUI()
-        {
-            if (_currentUI != null)
+            GameManager gameManager = GameManager.Instance;
+            if (gameManager == null)
             {
-                _currentUI.gameObject.SetActive(false);
+                yield break;
             }
-
-            _thirdLevelUI.gameObject.SetActive(true);
-            _currentUI = _thirdLevelUI;
-        }
+            
+            SoundManager soundManager = SoundManager.Instance;
+            if (soundManager == null)
+            {
+                yield break;
+            }
         
-        public void SwitchToFourthLevelUI()
-        {
-            if (_currentUI != null)
-            {
-                _currentUI.gameObject.SetActive(false);
-            }
-
-            _fourthLevelUI.gameObject.SetActive(true);
-            _currentUI = _fourthLevelUI;
+            effectsManager.StartCongratulations();
+            soundManager.PlayAdditionalSound(ESound.Success);
+            yield return new WaitForSeconds(1f);
+        
+            gameManager.StartMenuScene();
         }
     }
 }
